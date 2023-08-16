@@ -36,7 +36,7 @@ body {
 /* header */
 .top-bar {
   height: 70px;
-  border-bottom: 1px solid #454545;
+  border-bottom: 1px solid #939393;
   background-color: white;
   position: fixed;
   top: 0;
@@ -60,7 +60,7 @@ body {
   width: 100%;
   background-color: white;
   transition: 0.3s linear;
-  transform: translatey(0.3px);
+  transform: translatey(.3px);
   display: none;
   box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.75);
 }
@@ -102,7 +102,7 @@ body {
 }
 
 .top-bar__menu-1>ul>li>div>div>ul>li {
-  border: 0px solid #939393;
+  border: 0px solid #ddd;
   border-left-width: 1px;
   padding: 10px 0;
 }
