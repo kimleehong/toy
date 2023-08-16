@@ -217,7 +217,6 @@ body {
 .section_2 .img_box {
   display: block;
   height: 327px;
-  background-color: red;
   overflow: hidden;
   border-radius: 10px;
 }
