@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+
+  <!-- 제이쿼리 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- 스와이퍼 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- 테일윈드 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+    referrerpolicy="no-referrer" />
+
+  <!-- 폰트어썸 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- local -->
+  <link rel="stylesheet" href="/css/signup.css" />
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="flex justify-center items-center h-full">
+      <div class="rounded-lg WrapperScreen">
+        <h2 class="text-2xl font-bold">
+          회원가입
+        </h2>
+        <form>
+          <div class="mt-8">
+            <div class="id mt-5">
+              <label class="inline-block mb-2">아이디</label>
+              <input type="text"
+                class="border-gray-400 rounded-lg block w-full py-3 px-4 mb-3 text-sm placeholder-gray-400"
+                placeholder="사용하실 아이디를 입력해주세요.">
+            </div>
+            <div class="password-box mt-5">
+              <label class="inline-block mb-2">비밀번호</label>
+              <input type="password"
+                class="border-gray-400 rounded-lg block w-full py-3 px-4 mb-3 text-sm placeholder-gray-400"
+                placeholder="비밀번호를 입력해주세요">
+              <ul class="mt-2 text-gray-500 text-sm space-y-0.5">
+                <li class="flex space-x-2 items-center">
+                  <span class="inline-block ml-1 bg-gray-500 rounded-full" style="width: 6px; height: 6px;"></span>
+                  <p class="text-xs">10자 이상 입력</p>
+                </li>
+                <li class="flex space-x-2 items-center">
+                  <span class="inline-block ml-1 bg-gray-500 rounded-full" style="width: 6px; height: 6px;"></span>
+                  <p class="text-xs">영문/숫자/특수문자 중 2개 이상 포함</p>
+                </li>
+                <li class="flex space-x-2 items-center">
+                  <span class="inline-block ml-1 bg-gray-500 rounded-full" style="width: 6px; height: 6px;"></span>
+                  <p class="text-xs">동일한 숫자 3개 이상 연속 사용 불가</p>
+                </li>
+              </ul>
+              <label class="inline-block mb-2 mt-5">비밀번호 확인</label>
+              <input type="password"
+                class="border-gray-400 rounded-lg block w-full py-3 px-4 mb-3 text-sm placeholder-gray-400"
+                placeholder="비밀번호를 다시 한 번 입력해주세요">
+            </div>
+            <div class="email mt-5">
+              <label class="inline-block mb-2">주소</label>
+              <div class="flex space-x-2">
+                <div class="">
+                  <input type="text"
+                    class="border-gray-400 rounded-lg block w-full py-3 px-4 mb-3 text-sm placeholder-gray-400"
+                    placeholder="우편번호">
+                </div>
+                <button type="button" class="btn-1 flex-shrink-0 py-3 px-4
+                                             border rounded-lg
+                                             flex items-center
+                                             justify-center mb-3">
+                  <span class="text-sm font-semibold">주소 찾기</span>
+                </button>
+              </div>
+              <div class="flex space-x-2">
+                <div class="relative w-full">
+                  <input type="text" placeholder="기본 주소"
+                    class="border-gray-400 placeholder-gray-400 block rounded-lg py-3 px-4 text-sm w-full">
+                </div>
+              </div>
+              <div class="flex space-x-2 mt-3">
+                <div class="relative w-full">
+                  <input type="text" placeholder="세부 주소"
+                    class="border-gray-400 placeholder-gray-400 block rounded-lg py-3 px-4 text-sm w-full">
+                </div>
+              </div>
+            </div>
+            <div class="mt-8">
+              <button class="btn-2 flex justify-center py-3 items-center w-full rounded-lg">
+                <span class="text-white">
+                  확인
+                </span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
