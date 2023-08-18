@@ -30,17 +30,17 @@ body label {
   width: 430px;
 }
 
-.btns {
+.btn {
   color: white;
   background-color: #ff9995;
 }
 
-.btns:hover {
+.btn:hover {
   color: white;
   background-color: #f14c46;
 }
 
-.btns>span {
+.btn>span {
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 0.2rem;
