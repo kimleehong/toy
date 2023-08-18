@@ -227,11 +227,15 @@
         <form method="post">
           <div class="mt-4 flex flex-col gap-2 inquiry_registration_title">
             <label for="subject">제목</label>
-            <input type="text">
+            <input type="text" required>
+          </div>
+          <div class="mt-4 flex flex-col gap-2 inquiry_registration_phone">
+            <label for="phone">연락처</label>
+            <input type="tel" id="phone" name="phone" placeholder="010-1234-5678" required>
           </div>
           <div class="mt-4 flex flex-col gap-2 inquiry_registration_content">
             <label for="content" class="form-label">내용</label>
-            <textarea class="textarea"></textarea>
+            <textarea class="textarea" required></textarea>
           </div>
           <div class="flex gap-2 items-center justify-center mt-4 inquiry_registration_nav">
             <a href="/html/inquiry.html">목록</a>
@@ -243,7 +247,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bottom-bar-1 mt-48">
+  <footer class="bottom-bar-1 mt-32">
     <hr class="mb-20">
     <div class="con mx-auto px-3">
       <div class="flex gap-4 gap-20">
