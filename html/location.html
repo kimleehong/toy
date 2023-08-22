@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>문의 등록</title>
+  <title>위치 정보</title>
 
   <!-- 제이쿼리 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
@@ -25,8 +25,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- local -->
-  <link rel="stylesheet" href="/css/inquiry_form.css" />
-  <script src="/js/inquiry_form.js" defer></script>
+  <link rel="stylesheet" href="/css/location.css" />
 </head>
 
 <body>
@@ -218,37 +217,10 @@
     </div>
   </header>
 
-  <!-- 문의하기 -->
+  <!-- 위치정보 -->
   <section class="con-min-width">
-    <div class="inquiry_registration mx-auto flex flex-col">
-      <div class="form_wrap flex flex-col h-full">
-        <div class="border-bottom inquiry_registration_caption">1:1 문의하기</div>
-        <hr class="border-black mt-2">
-        <form method="post">
-          <div class="wrapwer flex gap-8 mt-6">
-            <div class="mt-4 flex flex-col gap-2 inquiry_registration_name flex-1">
-              <label for="phone">이름</label>
-              <input type="text" id="name" name="name" placeholder="이름을 적어주세요." required>
-            </div>
-            <div class="mt-4 flex flex-col gap-2 inquiry_registration_phone flex-1">
-              <label for="phone">연락처</label>
-              <input type="tel" id="phone" name="phone" placeholder="010-1234-5678" required>
-            </div>
-          </div>
-          <div class="mt-4 flex flex-col gap-2 inquiry_registration_title">
-            <label for="subject">제목</label>
-            <input type="text" required>
-          </div>
-          <div class="mt-4 flex flex-col gap-2 inquiry_registration_content">
-            <label for="content" class="form-label">내용</label>
-            <textarea class="textarea" required></textarea>
-          </div>
-          <div class="flex gap-2 items-center justify-center mt-4 inquiry_registration_nav">
-            <a href="/html/inquiry.html">목록</a>
-            <input type="submit" value="글쓰기" class="btn">
-          </div>
-        </form>
-      </div>
+    <div class="con mx-auto">
+
     </div>
   </section>
 
