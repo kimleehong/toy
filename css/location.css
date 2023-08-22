@@ -192,4 +192,19 @@ footer {
   color: #ff9995;
 }
 
-/* 문의하기 */
+/* 위치 정보 */
+.location_box {
+  margin-top: 100px;
+}
+
+.location_box>.title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.location_box>.specific>div {
+  background-color: rgb(125, 125, 125);
+  border-radius: 20px;
+  width: 1200px;
+  height: 675px;
+}
