@@ -199,37 +199,52 @@ footer {
 }
 
 .inquiry_registration_caption {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
 }
 
-.inquiry_registration_title>label {
-  font-size: 16px;
+.inquiry_registration_name>label {
+  font-size: 18px;
 }
 
-.inquiry_registration_title>input {
+.inquiry_registration_name>input {
   outline: none;
   border: 1px solid #939393;
-  padding: 4px 8px;
-  width: 100%;
+  padding: 14px 20px;
   border-radius: 6px;
+}
+
+.inquiry_registration_phone>label {
+  font-size: 18px;
 }
 
 .inquiry_registration_phone>input {
   outline: none;
   border: 1px solid #939393;
-  padding: 4px 8px;
+  padding: 14px 20px;
+  border-radius: 6px;
+}
+
+.inquiry_registration_title>label {
+  font-size: 18px;
+}
+
+.inquiry_registration_title>input {
+  outline: none;
+  border: 1px solid #939393;
+  padding: 14px 20px;
+  width: 100%;
   border-radius: 6px;
 }
 
 .inquiry_registration_content>label {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .textarea {
   outline: none;
   border: 1px solid #939393;
-  padding: 4px 8px;
+  padding: 14px 20px;
   width: 100%;
   border-radius: 6px;
   resize: none;

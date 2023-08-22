@@ -1,0 +1,105 @@
+/* 폰트 */
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+html>body {
+  font-family: 'Pretendard-Regular';
+  font-size: 15px;
+  color: #333333;
+}
+
+/* lib */
+.con {
+  width: var(--site-width);
+}
+
+.con-min-width {
+  min-width: var(--site-width);
+}
+
+html>body * {
+  white-space: nowrap;
+}
+
+:root {
+  --site-width: 1400px;
+}
+
+/* 답변 등록 폼 */
+.inquiry_details_title {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.inquiry_details_box>.wrapwer_1>.name_box>.name_1 {
+  font-size: 18px;
+}
+
+.inquiry_details_box>.wrapwer_1>.name_box>.name_2 {
+  background-color: #eee;
+  padding: 14px 20px;
+  border-radius: 8px;
+}
+
+.inquiry_details_box>.wrapwer_1>.call>.call_1 {
+  font-size: 18px;
+}
+
+.inquiry_details_box>.wrapwer_1>.call>.call_2 {
+  background-color: #eee;
+  padding: 14px 20px;
+  border-radius: 8px;
+}
+
+.inquiry_details_box>.title_box>.title_1 {
+  font-size: 18px;
+}
+
+.inquiry_details_box>.title_box>.title_2 {
+  white-space: normal;
+  background-color: #eee;
+  padding: 14px 20px;
+  border-radius: 8px;
+}
+
+.inquiry_details_box>.content>.content_1 {
+  font-size: 18px;
+}
+
+.inquiry_details_box>.content>.content_2 {
+  white-space: normal;
+  background-color: #eee;
+  padding: 14px 20px;
+  border-radius: 8px;
+}
+
+.inquiry_details_box .answer_box .answer_1 {
+  font-size: 18px;
+}
+
+.inquiry_details_box .answer_box .answer_2 {
+  white-space: normal;
+  background-color: #eee;
+  padding: 14px 20px;
+  border-radius: 8px;
+  outline: none;
+  height: 300px;
+  resize: none;
+}
+
+.inquiry_details_box>form .btn {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333333;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
