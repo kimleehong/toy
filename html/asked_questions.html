@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Main</title>
+
+  <!-- 제이쿼리 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- 스와이퍼 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- 테일윈드 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+    referrerpolicy="no-referrer" />
+
+  <!-- 폰트어썸 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- local -->
+  <link rel="stylesheet" href="/css/asked_questions.css" />
+  <script src="/js/asked_questions.js" defer></script>
+</head>
+
+<body>
+
+  <!-- 탑메뉴 -->
+  <header class="con-min-width top-bar">
+    <div class="con mx-auto flex h-full gap-7 px-2">
+      <a href="/html/index.html" class="top-bar__logo-1 flex items-center">
+        <span class="text-xl font-bold"> PetShop </span>
+      </a>
+      <form class="search small-search-bar flex gap-3 ml-4">
+        <button type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <input type="text" name="search" placeholder="검색어를 입력하세요" />
+      </form>
+      <div class="flex-grow"></div>
+      <nav class="top-bar__menu-1">
+        <ul class="flex h-full">
+          <li>
+            <a href="#" class="flex h-full items-center">브랜드</a>
+            <div class="con-min-width">
+              <div class="con mx-auto">
+                <ul class="flex">
+                  <li class="flex-1">
+                    <a href="#">시니멀</a>
+                  </li>
+                  <li class="flex-1">
+                    <a href="#">브리지테일</a>
+                  </li>
+                  <li class="flex-1">
+                    <a href="#">반려소반</a>
+                  </li>
+                  <li class="flex-1">
+                    <a href="#">뉴트리알엑스</a>
+                  </li>
+                  <li class="flex-1">
+                    <a href="#">네이처알로</a>
+                  </li>
+                  <li class="flex-1">
+                    <a href="#">더보양</a>
+                  </li>
+                  <li class="flex-1">
+                    <a href="#">네이처스독</a>
+                  </li>
+                  <li class="flex-1">
+                    <a href="#">슈퍼포우</a>
+                  </li>
+                  <li class="flex-1">
+                    <a href="#">캣츠모리</a>
+                  </li>
+                  <li class="flex-1">
+                    <a href="#">이지너프</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="flex h-full items-center">강아지</a>
+            <div class="con-min-width">
+              <div class="con mx-auto">
+                <ul class="flex">
+                  <li class="flex-1">
+                    <a href="#">사료</a>
+                    <ul>
+                      <li><a href="#">소프트사료</a></li>
+                      <li><a href="#">건사료</a></li>
+                      <li><a href="#">습식사료</a></li>
+                      <li><a href="#">화식/자연식</a></li>
+                      <li><a href="#">동결건조</a></li>
+                    </ul>
+                  </li>
+                  <li class="flex-1">
+                    <a href="#">간식</a>
+                    <ul>
+                      <li><a href="#">수제간식</a></li>
+                      <li><a href="#">트릿/저킷/소시지</a></li>
+                      <li><a href="#">덴탈껌</a></li>
+                      <li><a href="#">캔/파우치/레토르트</a></li>
+                    </ul>
+                  </li>
+                  <li class="flex-1">
+                    <a href="#">영양제</a>
+                    <ul>
+                      <li><a href="#">일반 영양제</a></li>
+                      <li><a href="#">유산균</a></li>
+                      <li><a href="#">오메가3</a></li>
+                    </ul>
+                  </li>
+                  <li class="flex-1">
+                    <a href="#">일반용품</a>
+                    <ul>
+                      <li><a href="#">위생용품</a></li>
+                      <li><a href="#">배변용품</a></li>
+                      <li><a href="#">산책용품</a></li>
+                      <li><a href="#">식사용품</a></li>
+                      <li><a href="#">장난감</a></li>
+                      <li><a href="#">의약외품</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="flex h-full items-center">고양이</a>
+            <div class="con-min-width">
+              <div class="con mx-auto">
+                <ul class="flex">
+                  <li class="flex-1">
+                    <a href="#">사료</a>
+                    <ul>
+                      <li><a href="#">소프트사료</a></li>
+                      <li><a href="#">건사료</a></li>
+                      <li><a href="#">습식사료</a></li>
+                      <li><a href="#">화식/자연식</a></li>
+                      <li><a href="#">동결건조</a></li>
+                    </ul>
+                  </li>
+                  <li class="flex-1">
+                    <a href="#">간식</a>
+                    <ul>
+                      <li><a href="#">수제간식</a></li>
+                      <li><a href="#">트릿/저킷/소시지</a></li>
+                      <li><a href="#">덴탈껌</a></li>
+                      <li><a href="#">캔/파우치/레토르트</a></li>
+                    </ul>
+                  </li>
+                  <li class="flex-1">
+                    <a href="#">영양제</a>
+                    <ul>
+                      <li><a href="#">일반 영양제</a></li>
+                      <li><a href="#">유산균</a></li>
+                      <li><a href="#">오메가3</a></li>
+                    </ul>
+                  </li>
+                  <li class="flex-1">
+                    <a href="#">일반용품</a>
+                    <ul>
+                      <li><a href="#">위생용품</a></li>
+                      <li><a href="#">배변용품</a></li>
+                      <li><a href="#">산책용품</a></li>
+                      <li><a href="#">식사용품</a></li>
+                      <li><a href="#">장난감</a></li>
+                      <li><a href="#">의약외품</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="flex h-full items-center">고객센터</a>
+            <div class="con-min-width">
+              <div class="con mx-auto">
+                <ul class="flex">
+                  <li class="flex-1">
+                    <a href="#">공지사항</a>
+                  </li>
+                  <li class="flex-1">
+                    <a href="/html/asked_questions.html">자주묻는 질문</a>
+                  </li>
+                  <li class="flex-1">
+                    <a href="/html/inquiry.html">1:1 문의</a>
+                  </li>
+                  <li class="flex-1">
+                    <a href="#">위치 정보</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <ul class="flex top-bar__menu-2 h-full items-center">
+        <li>
+          <a href="#"><span><i class="fa-solid fa-basket-shopping"></i></span></a>
+        </li>
+        <li class="top-bar__menu-2__bar mx-3"></li>
+        <li>
+          <a href="/html/login.html"><span>로그인</span></a>
+        </li>
+        <li class="top-bar__menu-2__bar mx-3"></li>
+        <li>
+          <a href="/html/signup.html"><span>가입하기</span></a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- 자주 묻는 질문 -->
+  <section class="con-min-width">
+    <div class="con mx-auto">
+      <div class="asked_section flex flex-col">
+        <div class="asked_section_title">
+          자주 묻는 질문
+        </div>
+        <hr class="border-black mt-2">
+        <div class="asked_box">
+          <ul>
+            <li>
+              <div class="asked_box_question"><span>질문 1</span></div>
+              <div class="asked_box_answer">
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi vitae quaerat provident aliquam
+                  possimus, ducimus eveniet dolorum quia amet. Tenetur fugiat unde labore molestiae ut, corrupti nobis?
+                  Asperiores, minus quos?</div>
+                <div>Officiis optio minus repellat nihil voluptates fugit maxime! Consectetur saepe voluptate explicabo,
+                  error debitis eaque officia facere deserunt magni maiores ab culpa mollitia earum adipisci eligendi
+                  placeat qui, cupiditate harum.</div>
+                <div>Eaque dignissimos cupiditate placeat ratione rem obcaecati amet, magnam reprehenderit a quam
+                  perspiciatis ad sit velit consectetur excepturi. Nisi hic, ipsa minus nobis consequatur adipisci animi
+                  voluptate. Voluptates, quidem est.</div>
+                <div>Porro perferendis et pariatur sint labore doloribus explicabo incidunt earum dolores,
+                  necessitatibus impedit sequi quia architecto, praesentium, cum minus officia assumenda blanditiis
+                  reiciendis cumque ratione! Beatae vero corporis tenetur impedit.</div>
+                <div>Tempore ex magni mollitia excepturi commodi facere officia sunt nisi placeat, perferendis
+                  asperiores quos! Asperiores at, perspiciatis, dignissimos suscipit rerum inventore hic reiciendis
+                  sapiente commodi illo ducimus! Quod, sequi natus!</div>
+                <div>Molestias, quasi dolorum sint debitis odio voluptatibus amet hic, esse ut earum animi corporis
+                  quisquam exercitationem vitae doloribus! Voluptates adipisci tempore praesentium doloremque voluptatum
+                  officiis minima ab distinctio eligendi accusantium?</div>
+                <div>Illum eum commodi est voluptas rem officiis delectus expedita architecto optio cumque facilis
+                  ducimus maiores reiciendis, nemo alias eaque, eveniet iure. Placeat in tempora modi suscipit est neque
+                  dolores officia!</div>
+                <div>Dolore obcaecati fugit beatae, earum reiciendis cum. Maiores odit alias harum voluptatum illo
+                  neque. Praesentium expedita libero tempore blanditiis aliquid voluptates, beatae deleniti nesciunt
+                  molestias nam quam quos cumque minima?</div>
+                <div>Mollitia modi laboriosam voluptate quae facere odio. Nesciunt vitae maxime in consectetur facere
+                  doloremque ad beatae labore fugit officiis nihil ea, quam quae? Veniam aliquid, nemo quasi itaque
+                  dolorem eos?</div>
+                <div>Dolorem maiores mollitia expedita facilis incidunt eaque cumque velit maxime, dolore neque? Earum
+                  distinctio, repellendus dolorem praesentium hic quod veritatis, corrupti veniam excepturi, minus quas
+                  ex deserunt obcaecati nostrum quaerat!</div>
+              </div>
+            </li>
+            <li>
+              <div class="asked_box_question"><span>질문 2</span></div>
+              <div class="asked_box_answer">
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et commodi eius doloremque enim voluptates
+                  nemo, corrupti culpa fugit ratione inventore. Quibusdam cum maxime vitae error minima mollitia tenetur
+                  unde vel?</div>
+                <div>Optio, quae! Eius perferendis incidunt deleniti voluptatum ab quis totam cupiditate, dicta a illum
+                  quisquam? Corporis praesentium tenetur adipisci dolores. Deleniti dolore odit illo sed. Iste quae
+                  tempora dolorum incidunt.</div>
+                <div>Itaque ex deserunt nostrum vitae ratione repellendus delectus eaque pariatur nesciunt vero ad
+                  repellat laudantium, sed magnam. Dolore hic recusandae saepe. Magnam ullam illo velit doloremque vitae
+                  porro ipsam itaque.</div>
+                <div>A dicta voluptatum sit natus quos eos ex blanditiis eaque tenetur dignissimos molestias aperiam
+                  repellat sunt officiis fugiat provident, commodi consequatur sequi quasi! Ut commodi minima similique
+                  impedit necessitatibus inventore!</div>
+                <div>Voluptates est molestiae veritatis repellendus magni? Expedita tempora ex qui nam voluptate ipsam
+                  voluptates eos? Minus modi maiores rerum odit optio repellat est vero magni perspiciatis esse,
+                  exercitationem nam impedit.</div>
+                <div>Dignissimos labore est quae ab aspernatur, quo, neque aut dolores perspiciatis rem maiores saepe
+                  esse doloremque praesentium. Beatae consequuntur deserunt consequatur vero, hic odio provident illo
+                  inventore quasi dolores alias.</div>
+                <div>Eveniet minus assumenda laboriosam dolor officia tempore eos ad vero magni doloribus, sit
+                  praesentium optio aliquam explicabo itaque! Ad omnis amet ea debitis animi cupiditate quibusdam iste,
+                  quo accusantium nam.</div>
+                <div>Nesciunt, consequatur provident, obcaecati aut beatae quaerat iusto id cupiditate ea neque saepe ab
+                  unde, fugiat error expedita! Magni accusantium hic nihil repellendus eveniet odit quidem blanditiis
+                  enim repudiandae nisi.</div>
+                <div>Quo, architecto? Nobis est qui ducimus doloremque quidem explicabo voluptates eius accusamus
+                  voluptatibus reprehenderit a modi ad, eligendi veritatis. Molestiae eveniet esse porro odit, numquam
+                  aut placeat nostrum magnam obcaecati!</div>
+                <div>Dignissimos praesentium vel tempore architecto velit? Error perspiciatis officia sed non assumenda
+                  hic voluptatem molestiae nesciunt illum, commodi odio doloremque minima sequi aperiam vel eius
+                  laborum, vero excepturi perferendis sint!</div>
+              </div>
+            </li>
+            <li>
+              <div class="asked_box_question"><span>질문 3</span></div>
+              <div class="asked_box_answer">
+                <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat soluta corporis molestiae
+                  deleniti omnis cum iusto quas laborum quidem velit exercitationem illum officiis, facere reprehenderit
+                  consequatur laudantium quisquam nulla ex.</div>
+                <div>Repudiandae numquam ex dolor? Dolores ducimus beatae nostrum eius, perspiciatis at eos in dolore
+                  ipsam eligendi aliquam ipsa temporibus molestiae voluptatem quas architecto ea amet ex nihil vitae
+                  unde facere!</div>
+                <div>Aliquid doloribus repellendus officiis repellat perferendis nobis saepe, cumque eligendi pariatur
+                  iste ipsum facilis dolor optio temporibus amet consectetur, sed quae aut nisi obcaecati. Iusto eum
+                  possimus harum iure molestiae.</div>
+                <div>Tempora nulla quia ad, dolor quis doloremque corrupti commodi. Molestiae dignissimos, in excepturi
+                  ad nobis consectetur minima. Repellendus, rem? Fuga similique modi ipsa tenetur amet quisquam
+                  voluptate labore. Id, consequatur.</div>
+                <div>Amet dignissimos ducimus ratione possimus nihil nulla error provident consequuntur veritatis minima
+                  nostrum cupiditate dicta quia numquam eveniet ad iure voluptatibus, neque tempore, perferendis quo.
+                  Natus ut quod deleniti officia.</div>
+                <div>Sit, sunt cumque! Excepturi sapiente dolorem quidem! Sint provident enim tempora, labore distinctio
+                  eos odio quaerat incidunt nemo blanditiis doloremque quasi fugiat voluptas possimus fuga alias quod
+                  animi veritatis expedita!</div>
+                <div>Ipsam aperiam quia tenetur. Nulla facere omnis sapiente cupiditate libero vel recusandae velit
+                  animi quae sunt tenetur, corporis quam illo ipsa veniam non alias dolore, ducimus esse tempore. Culpa,
+                  velit?</div>
+                <div>Natus, expedita. Nobis esse ipsa maxime, cum consectetur aliquid recusandae, quidem distinctio et
+                  nulla sit quasi corrupti quis enim? Voluptatum excepturi vero earum amet aut ullam reprehenderit
+                  consequatur tempora aliquam!</div>
+                <div>Id minus odio unde natus pariatur excepturi? Natus explicabo velit amet sequi officiis quia tenetur
+                  fugiat dolore, labore quas aliquid commodi nisi sint adipisci cumque qui corrupti facere nihil atque.
+                </div>
+                <div>Distinctio, corrupti unde aut iste molestiae, inventore maxime, quod explicabo iusto commodi
+                  officiis sit! Provident quisquam qui ad ab est nemo delectus nihil, in recusandae, obcaecati dolorum!
+                  Molestias, ipsum perferendis.</div>
+              </div>
+            </li>
+            <li>
+              <div class="asked_box_question"><span>질문 4</span></div>
+              <div class="asked_box_answer">
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sunt vel provident, unde quos
+                  ullam ipsum quis tempore amet mollitia quo numquam maxime error nisi! Eaque placeat atque voluptatum
+                  odit?</div>
+                <div>Eveniet, cupiditate quo at quod repellendus nulla quae inventore, delectus consectetur dolorum
+                  rerum ex quasi iste aspernatur eos expedita voluptatibus placeat? Id necessitatibus facere mollitia,
+                  sint labore fugit asperiores incidunt.</div>
+                <div>Vero atque exercitationem qui, in suscipit cumque magnam? Cum commodi minus alias. Accusantium
+                  reiciendis quaerat recusandae ullam esse minus doloremque in enim pariatur natus, distinctio
+                  consequatur ipsam suscipit magnam asperiores!</div>
+                <div>Odio veritatis voluptatum, et autem reiciendis aperiam. Odit vero repellat dolor assumenda ab id,
+                  exercitationem expedita modi, nihil sed soluta quisquam? Possimus sed ipsam hic cum, beatae adipisci
+                  accusamus mollitia?</div>
+                <div>Cum cupiditate cumque excepturi dicta dolorem exercitationem odio eligendi nobis reiciendis et,
+                  sint totam fugit quaerat aut. Aliquam aliquid, facilis quaerat, fuga placeat, totam architecto ratione
+                  fugiat non corrupti harum.</div>
+                <div>Aspernatur maiores ut, ex ipsum maxime mollitia ad qui voluptatum quibusdam veniam nobis nulla eius
+                  accusamus inventore obcaecati totam iste. Aut ratione quas ut voluptatibus dolor consectetur ea magnam
+                  repellendus.</div>
+                <div>Inventore aut quasi perspiciatis, pariatur ducimus vel sapiente similique velit deserunt ullam,
+                  praesentium optio exercitationem. Iusto, eaque velit et vero deserunt quod accusantium tempore quos
+                  optio odit incidunt hic ut.</div>
+                <div>Amet animi dolor et praesentium quas nesciunt blanditiis eligendi facere voluptates vitae odio
+                  inventore harum tenetur qui delectus nulla quos quasi, earum temporibus! Ea eligendi voluptates modi
+                  placeat, aliquid ullam!</div>
+                <div>Totam aperiam modi, aspernatur at consectetur error earum quasi accusantium explicabo ad delectus
+                  alias adipisci ipsum, iure possimus ex aut placeat labore veniam veritatis enim reiciendis saepe
+                  perferendis obcaecati? Provident?</div>
+                <div>Nemo animi harum cumque ducimus veritatis, alias exercitationem! Incidunt ipsam cum, sint aperiam
+                  quam modi molestias? Dolorem quis, culpa commodi, laudantium error soluta aperiam iure velit fugit
+                  praesentium itaque? Cupiditate.</div>
+              </div>
+            </li>
+            <li>
+              <div class="asked_box_question"><span>질문 5</span></div>
+              <div class="asked_box_answer">
+                <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti eveniet corrupti officia
+                  possimus laborum, sapiente ex eos delectus quidem consequuntur fuga nam, qui laboriosam. Ducimus
+                  quisquam enim fugiat rem aut?</div>
+                <div>Alias non incidunt voluptatibus, omnis quas labore quasi doloribus fuga, nihil ex optio, neque
+                  deserunt dolorem adipisci sint temporibus dolor error cupiditate tempore totam assumenda iste ipsum.
+                  Laborum, quisquam dolores!</div>
+                <div>Eius quasi, beatae, eveniet error aut praesentium tempora fugit temporibus deleniti nobis
+                  consequatur provident nemo cumque et minima. Reiciendis libero minima consequatur minus natus
+                  accusamus iure porro laboriosam a eum?</div>
+                <div>Autem ad quas vitae non esse ratione sit velit aspernatur ut corporis! Illo a nam accusantium sunt
+                  maxime, commodi omnis optio laborum magnam facilis assumenda dignissimos dolore in eaque id?</div>
+                <div>Dicta iure, temporibus dolorum, voluptas aspernatur necessitatibus sed a accusamus vero ut,
+                  dignissimos facilis illo! Blanditiis error, laboriosam quisquam dolore architecto, illo, ratione animi
+                  beatae aliquam eligendi possimus officia. Molestiae!</div>
+                <div>Quod soluta magni rem a, quam temporibus optio nostrum nobis excepturi, expedita consectetur esse,
+                  quidem nesciunt! Hic eveniet assumenda aperiam consectetur totam eum eius ex ut asperiores, magni, et
+                  libero?</div>
+                <div>Recusandae, similique expedita sint animi cumque autem culpa distinctio quo eum hic ut eveniet,
+                  illum sed inventore, maiores vitae nostrum modi eaque. Ratione libero necessitatibus quaerat, labore
+                  ea aspernatur provident!</div>
+                <div>Totam dolores, animi corporis asperiores facere natus id amet ipsum laboriosam harum? Nihil,
+                  dolorum? Ipsam porro odio at! Debitis soluta molestias voluptatum incidunt fugiat dolores officiis
+                  ipsum omnis dolore similique.</div>
+                <div>Nesciunt nemo in dolores. Unde aliquid quod assumenda voluptatum corporis animi quis expedita
+                  consequatur, earum modi natus ipsa odio architecto qui vero iusto exercitationem suscipit? Vero illo
+                  assumenda culpa aspernatur.</div>
+                <div>Repellat, voluptates recusandae. Sed iusto blanditiis suscipit at cum, saepe quas deleniti nesciunt
+                  sapiente! Incidunt beatae deleniti dolor commodi nihil ex dicta, neque error, sequi voluptatum non
+                  odio, tempore natus?</div>
+              </div>
+            </li>
+            <li>
+              <div class="asked_box_question"><span>질문 6</span></div>
+              <div class="asked_box_answer">
+                <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum itaque ratione quaerat a ad ipsam
+                  hic illo unde amet, maiores accusantium neque fugiat natus? Voluptatibus dolore blanditiis voluptatem
+                  rem libero?</div>
+                <div>Cumque nam similique mollitia. Aut eveniet est debitis eaque iure, totam deleniti sunt inventore
+                  similique expedita, sint quasi recusandae saepe aliquam enim reiciendis unde, et porro placeat!
+                  Inventore, totam aliquid!</div>
+                <div>Debitis quam hic dolor minus tenetur dolorem consequuntur illo minima sed optio doloremque eveniet
+                  autem aut voluptatem officia, eius maiores. Ut et pariatur suscipit eligendi excepturi fugiat ex,
+                  fugit fuga.</div>
+                <div>Quae aliquid exercitationem in velit tenetur? Voluptatibus aliquid inventore eos id architecto
+                  illum minus eveniet cum maiores porro ratione, in, asperiores dicta consectetur, deserunt excepturi
+                  ipsam incidunt doloremque. Voluptates, porro.</div>
+                <div>Asperiores earum laborum a. Quas, odit distinctio a molestias eius fugiat ex animi quibusdam quasi
+                  sequi? Ex magni, nesciunt repellendus placeat, ipsam ipsum facilis molestiae obcaecati ut, delectus
+                  nam porro?</div>
+                <div>Ad iusto nam quis, debitis suscipit maxime aliquid nulla vel dolore itaque quam voluptatum. Amet
+                  magni eum ab pariatur soluta dolores optio illo, aspernatur ex totam possimus aperiam neque maiores.
+                </div>
+                <div>Magni provident saepe sunt reiciendis enim aut molestiae suscipit, quo asperiores commodi nobis non
+                  laboriosam eaque id harum porro officia? Obcaecati, provident incidunt? Vero, hic odit. Labore eum
+                  vitae sapiente.</div>
+                <div>Repudiandae facilis natus molestiae similique pariatur, asperiores quam consequuntur accusantium.
+                  Repellat error iusto hic quos harum aliquam, porro quibusdam mollitia quidem facilis veritatis in ipsa
+                  quisquam. Dolor incidunt minima placeat.</div>
+                <div>Iure, repellat, recusandae error odit optio voluptates doloribus magni, repudiandae dolor sapiente
+                  nemo distinctio! Tempore autem hic necessitatibus repudiandae culpa non enim consequuntur provident,
+                  officia dolorem praesentium. Ea, vitae sequi.</div>
+                <div>Minima doloribus aliquam quo qui dolorem sed eius sit magni esse, excepturi quae, nisi hic.
+                  Provident sit, consequatur molestiae totam cum laborum sed dolorem hic alias exercitationem reiciendis
+                  facere non!</div>
+              </div>
+            </li>
+            <li>
+              <div class="asked_box_question"><span>질문 7</span></div>
+              <div class="asked_box_answer">
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis itaque quam quos. Impedit odio
+                  ullam laboriosam deleniti distinctio ipsum cum. Quas, corrupti! Dicta cupiditate quo perspiciatis
+                  asperiores incidunt ut minima.</div>
+                <div>Natus iusto harum, deserunt fuga vero, amet autem inventore, earum quidem sequi praesentium ratione
+                  dolor. Quia nemo aut dicta, sint quod dolores? Quibusdam at ea qui minus, ipsum cum quis!</div>
+                <div>Libero odit dolorem suscipit possimus vel provident, aspernatur nisi illum porro nobis maxime
+                  perferendis iure fuga voluptatem facilis numquam harum repellendus impedit dolor modi quas? Deserunt
+                  fugit porro voluptatibus odio!</div>
+                <div>Magnam consectetur quasi eligendi inventore tempora modi in soluta! Iste, inventore architecto,
+                  exercitationem deserunt voluptate unde, optio ullam pariatur dolores laudantium perspiciatis soluta
+                  placeat. Deserunt tempora labore sequi modi asperiores.</div>
+                <div>Expedita amet nisi eveniet enim maxime ducimus error nam at eum, facilis nesciunt libero corrupti
+                  similique velit eligendi ad doloremque voluptates blanditiis cumque rem id, voluptatibus culpa
+                  deleniti? Rem, perferendis!</div>
+                <div>Enim fuga explicabo, laborum debitis omnis sit, obcaecati eum voluptas laudantium error tempora,
+                  nam sed sequi! Repellat unde obcaecati quaerat ipsam, totam reiciendis error animi natus ea? Tempore,
+                  ut incidunt.</div>
+                <div>Nobis reiciendis quis est eum quaerat sint qui fugit odio at, amet magni natus, consectetur labore.
+                  Atque incidunt, similique eligendi excepturi, commodi odio maiores nam molestiae officiis culpa et
+                  possimus.</div>
+                <div>Amet assumenda ipsum non esse hic id, cum distinctio. Ad ea, cumque earum consequuntur corporis
+                  minima omnis vel enim, rerum amet inventore eius quas deserunt incidunt, provident harum numquam
+                  laborum.</div>
+                <div>Non eaque perspiciatis fuga, minima repellendus magnam reiciendis consequuntur? Accusantium unde
+                  ad, odit tenetur non quasi voluptas perferendis harum quam quibusdam, obcaecati facilis laborum
+                  consequatur. Dolorum fugit tenetur dignissimos eius.</div>
+                <div>Ea, reprehenderit quaerat? Vitae est reprehenderit vero enim. Id pariatur, mollitia, earum error,
+                  laudantium dignissimos qui corporis ab est aliquam eos temporibus hic assumenda fuga perferendis
+                  exercitationem aut ex nisi?</div>
+              </div>
+            </li>
+            <li>
+              <div class="asked_box_question"><span>질문 8</span></div>
+              <div class="asked_box_answer">
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque cum, iste velit perspiciatis
+                  cupiditate est nostrum ipsum. Minima corrupti voluptates quia, provident cupiditate obcaecati quisquam
+                  doloremque, dicta itaque animi odio!</div>
+                <div>Ut suscipit facere eveniet aspernatur excepturi soluta mollitia autem voluptas tempora. Amet sequi
+                  earum dolores molestiae autem, odio accusantium doloribus corporis. Sequi et, asperiores repudiandae
+                  suscipit ratione in aliquid eius!</div>
+                <div>Eveniet dolorum amet ipsam qui commodi odio recusandae similique placeat optio, tenetur aliquam
+                  assumenda ipsa voluptatibus iure quia esse ullam error rem fuga ut excepturi vitae sunt
+                  necessitatibus. Inventore, officiis.</div>
+                <div>Quam voluptatibus accusantium, non delectus voluptatem cumque assumenda et quod asperiores enim
+                  culpa velit maiores provident eos eligendi ullam deleniti. Libero enim labore nulla iure repellendus
+                  dolor tempore temporibus minus.</div>
+                <div>Dolor facilis veritatis dolore molestias provident minus quibusdam, aliquam eligendi soluta
+                  consectetur dolores deleniti. Unde modi explicabo quos ipsam magni assumenda commodi harum dolorem
+                  quasi repellendus. Tempora pariatur similique nisi.</div>
+                <div>Eius quis consectetur, cupiditate iure vero velit. Pariatur, consequatur reiciendis, a suscipit
+                  distinctio necessitatibus, magnam eum ab laborum vitae alias. Soluta nemo praesentium aperiam facilis
+                  recusandae tempora! Quisquam, doloribus iure.</div>
+                <div>Quod perferendis necessitatibus suscipit deleniti, eos consequuntur iste libero cumque vel ducimus
+                  quam molestias maiores accusamus repellendus consequatur excepturi nobis reprehenderit eligendi
+                  voluptatem quo illo. Perferendis, ullam. Ut, quis cumque!</div>
+                <div>Libero sit molestiae autem consequuntur tempora rem fuga, porro impedit tenetur! Rem quaerat in
+                  laudantium iste culpa dolores mollitia assumenda illo? Earum atque nemo expedita ducimus et fugit
+                  corrupti facere.</div>
+                <div>Neque expedita asperiores corporis quae? Itaque consectetur molestias laudantium tenetur unde iure
+                  nihil quas doloremque. Non numquam deserunt hic magni earum beatae, quibusdam consectetur sed nihil
+                  iste. Nemo, officiis et?</div>
+                <div>Laudantium vero quos corrupti iste corporis! Ullam eaque dignissimos officiis accusamus quaerat
+                  ratione, suscipit culpa amet, et natus eos? Veniam libero praesentium fugit quos. Laboriosam velit
+                  doloremque aliquam eveniet praesentium.</div>
+              </div>
+            </li>
+            <li>
+              <div class="asked_box_question"><span>질문 9</span></div>
+              <div class="asked_box_answer">
+                <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem harum eum laborum sunt accusamus
+                  repellat, nesciunt sequi veniam error iusto fugiat, nobis numquam distinctio deserunt, consequatur
+                  repudiandae amet totam architecto.</div>
+                <div>Soluta libero incidunt sed in eos quod? Atque fugiat in neque nobis excepturi veritatis temporibus
+                  cumque nostrum! Minus, debitis! Odio, ab. Dolorem quos minima ipsam maiores natus magni sequi tempora.
+                </div>
+                <div>Laborum, tempore quisquam, deserunt quod earum molestias temporibus magni a cumque nam fugit,
+                  repudiandae ratione eveniet debitis assumenda error. Dolores corrupti voluptate mollitia iste aliquid
+                  reiciendis placeat qui dolorem autem!</div>
+                <div>Voluptatum nulla tempore inventore porro numquam dolorem incidunt amet voluptatem perferendis error
+                  consectetur in accusantium, vero voluptates, aliquam repellat dolores blanditiis quae possimus esse
+                  placeat, reprehenderit nesciunt nostrum eaque! Earum.</div>
+                <div>Ipsam vel, optio velit error sequi necessitatibus quae reprehenderit consectetur omnis adipisci
+                  sunt a nemo et itaque, animi temporibus repellendus? Optio consequatur soluta suscipit cupiditate
+                  nemo, dolores animi minima neque!</div>
+                <div>Ipsum unde adipisci ad placeat veritatis dicta vero nam obcaecati, eius pariatur perferendis sint
+                  in facere recusandae distinctio illum natus. Quibusdam numquam asperiores optio, autem corrupti rem
+                  recusandae consequatur dolor.</div>
+                <div>Quam voluptate, commodi delectus inventore doloremque provident voluptatem dolores, sed maiores hic
+                  quae aperiam, laborum deserunt quis est ducimus sunt culpa porro reiciendis quas veniam consequatur
+                  accusantium illo rerum. Aliquam.</div>
+                <div>Dolor explicabo sapiente omnis beatae corrupti aperiam quae inventore et illum cum vitae modi eaque
+                  eligendi non, a reiciendis corporis dignissimos ipsam ab iusto veniam nihil. Enim quaerat id veniam.
+                </div>
+                <div>Provident dicta labore, sequi impedit atque quaerat. Cum molestiae ratione, asperiores illo maxime
+                  eum quod minus obcaecati tempore aliquam, laborum ullam quia officia necessitatibus quis, repellat
+                  libero voluptas consequuntur commodi.</div>
+                <div>Neque ratione, obcaecati, vitae a necessitatibus facilis aliquam minima accusamus corrupti dicta,
+                  voluptatibus sed repellendus incidunt? Recusandae nisi pariatur natus explicabo quas nesciunt aperiam
+                  aliquam obcaecati sapiente delectus, veniam illum.</div>
+              </div>
+            </li>
+            <li>
+              <div class="asked_box_question"><span>질문 10</span></div>
+              <div class="asked_box_answer">
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aspernatur asperiores officia
+                  in perferendis doloribus dicta nemo qui, obcaecati placeat. Quae eius, minus illo excepturi odio odit
+                  unde eligendi rerum.</div>
+                <div>Voluptatum doloribus veritatis consequuntur modi vero, dolorum molestias quod, quis illum provident
+                  reiciendis culpa distinctio fuga nesciunt minus! Id perspiciatis est commodi suscipit? Iste sint fuga
+                  laboriosam! Dolore, aperiam? Nemo.</div>
+                <div>Blanditiis voluptatem vitae cupiditate vel quis tenetur similique voluptates vero. Ut possimus
+                  praesentium eligendi sapiente, aperiam debitis nobis repudiandae porro modi mollitia molestiae dicta
+                  non enim, voluptas temporibus? Praesentium, ullam?</div>
+                <div>Accusantium ratione nemo laboriosam esse deleniti consequuntur, provident quam corrupti nihil
+                  officiis quis? Consequuntur provident, architecto esse, id modi ab, magni veritatis culpa odit
+                  officiis cum fugit vel molestias atque.</div>
+                <div>Saepe facere sit velit quo alias repudiandae in quis, veniam explicabo, dolores sint pariatur illo
+                  harum doloribus tempore voluptatibus necessitatibus accusantium omnis vel nam quasi ratione aperiam
+                  consequatur dolore. Repellat.</div>
+                <div>Temporibus laboriosam repudiandae natus magnam ea, fugiat libero officiis iste consequatur iusto
+                  consectetur voluptatum deserunt molestiae eveniet omnis quo pariatur molestias. Itaque, consectetur
+                  dolorem placeat minus porro vel dolorum inventore!</div>
+                <div>Illum laboriosam quam delectus at similique quaerat dicta asperiores? Porro aliquam ea quis odio
+                  maxime. Tempore placeat quam, in modi ex, quae harum accusamus sapiente perspiciatis necessitatibus,
+                  eum molestias pariatur!</div>
+                <div>Reiciendis error earum labore eius, harum minima quo, ad cum aperiam minus doloremque voluptatibus
+                  temporibus, iste incidunt atque ab! Earum, magnam! Quos placeat pariatur inventore dolorum voluptatem
+                  rem debitis fuga?</div>
+                <div>Dolorum voluptatibus natus explicabo quasi repudiandae maxime alias quisquam magni iure, qui
+                  voluptatum adipisci nemo ipsum non voluptas animi dolor maiores iste! Repellat repudiandae corrupti
+                  neque possimus vitae ut repellendus.</div>
+                <div>Illo libero maxime consectetur ullam debitis. Deleniti, nesciunt qui? Sed quidem magnam qui velit,
+                  fugit perspiciatis debitis in quos dicta vero soluta hic dolor natus mollitia placeat inventore vel
+                  incidunt.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bottom-bar-1 mt-32">
+    <hr class="mb-20">
+    <div class="con mx-auto px-3">
+      <div class="flex gap-4 gap-20">
+        <div>
+          <span class="font-bold text-lg">
+            Pet
+            <br>
+            Shop
+          </span>
+        </div>
+        <div class="flex-grow"></div>
+        <div>
+          <h1 class="font-bold mb-2">PetShop</h1>
+          <a class="petshop_introduce text-sm text-gray-500" href="#">PetShop 소개</a>
+        </div>
+        <div>
+          <h1 class="font-bold">Community</h1>
+          <ul class="text-sm mt-2 community">
+            <li class="text-gray-500">
+              <a href="#">
+                <span><i class="fab fa-facebook"></i></span>
+                <span>Facebook</span>
+              </a>
+            </li>
+            <li class="mt-1 text-gray-500">
+              <a href="#">
+                <span><i class="fab fa-instagram"></i></span>
+                <span>Instagram</span>
+              </a>
+            </li>
+            <li class="mt-1 text-gray-500">
+              <a href="#">
+                <span><i class="fab fa-youtube"></i></span>
+                <span>Youtube</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h1 class="font-bold">Help Center</h1>
+          <div class="mt-2">
+            <a class="question_btn flex justify-center py-3 px-26 items-center rounded-lg border border-gray-500 w-full"
+              href="/html/inquiry_form.html">1:1 문의하기
+            </a>
+          </div>
+          <div class="text-sm mt-2 text-gray-500">전화상담 | 010-7584-7734</div>
+          <div class="text-sm mt-2 text-gray-500">상담시간 | 11:00 - 19:00 (주말, 공휴일 제외)</div>
+          <div class="text-sm mt-2">
+            <span class="text-gray-500">궁금한 것이 있으신가요?</span>
+            <a href="/html/asked_questions.html" class="question_important font-bold">자주 묻는 질문</a>
+          </div>
+          <div class="text-xs mt-2 text-yellow-450"><span class="font-bold">🦁</span> 1:1 문의 시 더 빠른 답변을 받으실 수 있습니다.
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col px-3 bottom_info">
+        <div class="flex items-center space-x-2 text-xs">
+          <a href="" class="text-gray-500">이용약관</a>
+          <span class="w-1 h-1 rounded-full bg-gray-500"></span>
+          <a href="" class="text-gray-500">개인정보처리방침</a>
+          <span class="w-1 h-1 rounded-full bg-gray-500"></span>
+          <a href="" class="text-gray-500">환불규정</a>
+        </div>
+        <div class="flex mt-2">
+          <div class="bar text-xs text-gray-500 mr-2">
+            <span>Pet Shop</span>
+            <span>CEO leehong Kim</span>
+            <span>klh1523@naver.com</span>
+          </div>
+          <div class="flex text-xs mt-2 text-gray-500 lg:space-x-2 lg:mt-0">
+            <span>사업자 번호 : 264-88-011116</span>
+            <span>통신판매업 신고번호 : 2019 - 서울강남 - 00774</span>
+            <span>주소 : 대전 중구 사정동 376-9</span>
+          </div>
+        </div>
+      </div>
+  </footer>
+
+</body>
+
+</html>
