@@ -221,7 +221,7 @@ footer {
   border-radius: 8px;
 }
 
-.notice_nav>a {
+.notice_nav>a:nth-child(1) {
   width: 200px;
   height: 50px;
   border: 1px solid #dbdbdb;
@@ -231,6 +231,18 @@ footer {
   align-items: center;
 }
 
-.notice_nav>a:hover {
+.notice_nav>a:nth-child(1):hover {
   background-color: #f5f5f5;
+}
+
+.notice_nav>.modify_btn {
+  color: white;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  border: 1px solid #333;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
