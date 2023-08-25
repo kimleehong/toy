@@ -192,34 +192,4 @@ footer {
   color: #ff9995;
 }
 
-/* 위치 정보 */
-.location_box {
-  margin-top: 100px;
-}
-
-.location_box>.title {
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.location_box>.specific {
-  position: relative;
-}
-
-.location_box>.specific>.specific_box {
-  position: relative;
-  padding-top: calc(100% / 16 * 9);
-  height: 0;
-  overflow: hidden;
-  border-radius: 20px;
-}
-
-.location_box>.specific>.specific_box>.specific_box_inside {
-  padding-top: calc(100% / 16 * 9);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(125, 125, 125);
-}
+/* 상세 정보 */
