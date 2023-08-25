@@ -193,3 +193,148 @@ footer {
 }
 
 /* 상세 정보 */
+.specific_box {
+  margin-top: 100px;
+}
+
+.specific_box>.top_section>.img_box {
+  height: 740px;
+  overflow: hidden;
+}
+
+.specific_box>.top_section>.img_box>img {
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.coupon-if-wrap * {
+  color: #5b5b5b;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.coupon-if-wrap {
+  background-color: #fafafa;
+}
+
+.coupon-if-wrap .coupon-if-wrap-head {
+  border-top: 1px solid #e9e9e9;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff5f4;
+  padding: 15px 20px 15px 15px;
+  align-items: center;
+  position: relative;
+}
+
+.coupon-if-wrap .coupon-if-wrap-head1 {
+  font-weight: 700;
+}
+
+.coupon-if-wrap .coupon-if-wrap-head2 {
+  font-weight: 700;
+}
+
+.coupon-if-wrap .coupon-if-wrap-list {
+  display: flex;
+  padding: 15px 37px 15px 15px;
+  align-items: center;
+}
+
+.coupon-if-wrap .coupon-if-wrap-list .htxt {
+  width: 20%;
+}
+
+.coupon-if-wrap .coupon-if-wrap-list .mtxt {
+  flex: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: 100;
+}
+
+.coupon-if-wrap .coupon-if-wrap-list .mtxt label {
+  color: #b1b1b1;
+  cursor: pointer;
+}
+
+.coupon-if-wrap .coupon-if-wrap-list .mtxt.mtxtbld label {
+  color: #5b5b5b;
+}
+
+.coupon-if-wrap .coupon-if-wrap-list .ltxt {
+  width: 20%;
+  text-align: right;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 100;
+  white-space: nowrap;
+}
+
+.coupon-if-wrap .chkimg {
+  vertical-align: -2px;
+  margin-right: 3px;
+  background-image: url("https://atimg.sonyunara.com/attrangs/maxdisc/check.png");
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  background-size: 100%;
+}
+
+.coupon-if-wrap .chkimg:checked {
+  background-image: url("https://atimg.sonyunara.com/attrangs/maxdisc/checked.png");
+}
+
+.coupon-if-wrap .chkimg:disabled {
+  background-image: url("https://atimg.sonyunara.com/attrangs/maxdisc/default.png");
+}
+
+.product_name {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.price-box {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.price-box .p1 {
+  color: #939393;
+  font-size: 24px;
+  text-decoration: line-through;
+}
+
+.price-box .p2 {
+  color: #ff9995;
+  margin-right: 10px;
+}
+
+.price-box .p3 {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.price-box .p3>em {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.price .to-discount {
+  font-size: 20px;
+  color: #ff9995;
+}
+
+.price .to-discount>span {
+  font-size: 26px;
+}
+
+.list .bef>th {
+  text-align: start;
+}
+
+.list tr.bef td {
+  padding: 10px 0;
+}

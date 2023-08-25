@@ -26,6 +26,7 @@
 
   <!-- local -->
   <link rel="stylesheet" href="/static/css/specific_info.css" />
+  <script src="/static/js/specific_info.js" defer></script>
 </head>
 
 <body>
@@ -220,7 +221,222 @@
   <!-- 상세정보 -->
   <section class="con-min-width">
     <div class="con mx-auto">
+      <div class="specific_box">
+        <div class="top_section flex gap-4">
+          <div class="img_box flex-1">
+            <img
+              src="https://images.pexels.com/photos/1619690/pexels-photo-1619690.jpeg?auto=compress&cs=tinysrgb&w=1600"
+              alt="">
+          </div>
+          <div class="text_box flex-1 p-8 pt-0">
+            <div class="fix_area">
+              <div class="product_name">개껌 10g + 말랑간식 3개</div>
+              <div class="inner">
+                <div class="inner-box">
+                  <div class="left_area" style="margin-top:20px;">
+                    <div class="price price2">
+                      <div class="price-box flex justify-between items-end">
+                        <div class="wrap_1 flex flex-col">
+                          <span class="p1 self-start">30,000<em>원</em></span>
+                          <div class="to-discount">
+                            총 <span> 10,000<em>원 </em></span> 할인
+                          </div>
+                        </div>
+                        <div class="wrap_2">
+                          <span class="p2">33%</span>
+                          <span class="p3">20,000<em>원</em></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="coupon-if-wrap">
+                      <div class="coupon-if-wrap-head">
+                        <div class="coupon-if-wrap-head1">
+                          할인 정보
+                        </div>
+                        <div class="coupon-if-wrap-head2 flex items-center" style="cursor:pointer;"
+                          onclick="usecpn.toggleshow();">
+                          <span id="usecpnper" data-disper="33">33</span>%
+                          <span style="font-size:17px; margin-left:5px;" id="usecpnacc" data-account="30000"
+                            data-faccount="20000">20,000</span>원
+                          <span> <img class="toggleShowImg"
+                              src="https://atimg.sonyunara.com/attrangs/maxdisc/pc_arrow.png" alt="arrow"
+                              style="vertical-align: 3px; margin-left: 3px; transform: rotate(0deg);"></span>
+                        </div>
+                      </div>
+                      <div class="coupon-if-content" style="display: block; border-top: 1px solid rgb(233, 233, 233);">
+                        <div class="coupon-if-wrap-list">
+                          <div class="htxt">상품할인</div>
+                          <div class="mtxt mtxtbld">
+                            <input type="checkbox" class="chkimg" disabled="">
+                            기본할인 28%
+                          </div>
+                          <div class="ltxt mtxtbld">-33,000원</div>
+                        </div>
+                        <div class="coupon-if-wrap-list">
+                          <div class="htxt">보유 적립금</div>
+                          <div class="mtxt chnfontweight">
+                            <input type="checkbox" class="chkimg check" data-discount="1000"
+                              onchange="usecpn.chncpn(this)" id="usemempointslabel">
+                            <label for="usemempointslabel">
+                              보유한 적립금
+                            </label>
+                          </div>
+                          <div class="ltxt chnfontweight"><span class="havepnt"
+                              style="font-weight:inherit">1,000</span>원
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div style="border-top: 1px solid #e9e9e9; margin-bottom:10px;"></div>
+                    <table class="list">
+                      <colgroup>
+                        <col style="width: 100px;">
+                        <col>
+                      </colgroup>
+                      <tbody>
+                        <tr class="bef">
+                          <th scope="row">적립혜택</th>
+                          <td>
+                            <div class="benefit">
+                              <div>
+                                <span>
+                                  1% 적립
+                                </span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="2" height="10"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div style="padding-top:10px; border-top: 1px solid #e9e9e9;"></div>
+                    <table class="list">
+                      <colgroup>
+                        <col style="width: 100px;">
+                        <col>
+                      </colgroup>
+                      <tbody>
+                        <tr class="bef">
+                          <th scope="row">배송구분</th>
+                          <td>
+                            <div class="benefit">
+                              <div class="flex gap-4">
+                                <span>3,500원</span>
+                                <span>
+                                  ( 8만원이상 구매시
+                                  <span
+                                    style="color:#9265ee; font-style: oblique; font-weight:600; font-size:14px;">무료배송</span>
+                                  )
+                                </span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr class="bef">
+                          <th scope="row">배송예상</th>
+                          <td style="vertical-align: bottom; " ;="">
+                            <div class="todayDelivery">
+                              <p>오후 9시 이전 주문 시 <span> 08월 19일 토요일</span> 도착 예정 </p>
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr class="bef">
+                          <th scope="row">브랜드</th>
+                          <td>
+                            <div class="benefit">
+                              <div>
+                                <span>
+                                  시니멀
+                                </span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr class="bef">
+                          <th scope="row">사이즈 안내</th>
+                          <td>
+                            <div class="benefit">
+                              <div>
+                                <span>
+                                  착장 모델 사이즈
+                                </span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="2" height="10"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div style="border-top: 1px solid #e9e9e9;"></div>
 
+
+                  <!-- 폼 -->
+                  <form class="select-form">
+                    <input type="hidden" name="goods_idx" value=""
+                      data-gname="[아뜨랑스] (가을하객룩/격식룩♥) 에일린 숄카라 롱 A라인 원피스 op10151">
+                    <div style="height: 10px;"></div>
+                    <div class="right_area">
+                      <table class="list list2" style="margin-top:0;">
+                        <colgroup>
+                          <col style="width: 80px;">
+                          <col>
+                        </colgroup>
+                        <tbody style="">
+                          <tr style="display:none;">
+                            <th scope="row">옵션</th>
+                            <td>
+                              <select name="op1" onchange="GoodsProc.set_opt();" style="width: 100%;"
+                                data-goods_idx="66349">
+                                <option value="">옵션을 선택해주세요.</option>
+                                <option data-opname="Cream(model)" value="224911" data-account="85000"
+                                  data-ispluslimit="0" data-opcode="op10151">Cream(model)</option>
+                                <option data-opname="Black(model)" value="224914" data-account="85000"
+                                  data-ispluslimit="0" data-opcode="op10151">Black(model)</option>
+                                <option data-opname="Black (un222)" value="134452" data-account="7500"
+                                  data-ispluslimit="0" data-opcode="un222">Black</option>
+                                <option data-opname="Beige (un222)" value="134450" data-account="7500"
+                                  data-ispluslimit="0" data-opcode="un222">Beige</option>
+                                <option data-opname="Ivory (un222)" value="134451" data-account="7500"
+                                  data-ispluslimit="0" data-opcode="un222">Ivory</option>
+                                <option data-opname="Black (un224)" value="134462" data-account="6600"
+                                  data-ispluslimit="0" data-opcode="un224">Black</option>
+                                <option data-opname="Beige (un224)" value="134460" data-account="6600"
+                                  data-ispluslimit="0" data-opcode="un224">Beige</option>
+                                <option data-opname="Ivory (un224)" value="134461" data-account="6600"
+                                  data-ispluslimit="0" data-opcode="un224">Ivory</option>
+                              </select>
+                            </td>
+                          </tr>
+                          <tr style="display:none;">
+                            <th scope="row">사이즈</th>
+                            <td>
+                              <select name="op2" onchange="GoodsProc.set_opt();" style="width: 100%;">
+                                <option value="">색상을 먼저 선택해 주세요</option>
+                              </select>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom_section">
+
+    </div>
+    </div>
     </div>
   </section>
 
