@@ -209,6 +209,48 @@ footer {
   height: 100%;
 }
 
+/* 상품상세정보 상단 부분 */
+.product_name {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.price-box {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.price-box .p1 {
+  color: #939393;
+  font-size: 24px;
+  text-decoration: line-through;
+}
+
+.price-box .p2 {
+  color: #ff9995;
+  margin-right: 10px;
+}
+
+.price-box .p3 {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.price-box .p3>em {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.price .to-discount {
+  font-size: 20px;
+  color: #ff9995;
+}
+
+.price .to-discount>span {
+  font-size: 26px;
+}
+
+/* 할인적용 박스 */
 .coupon-if-wrap * {
   color: #5b5b5b;
   font-size: 13px;
@@ -291,50 +333,103 @@ footer {
   background-image: url("https://atimg.sonyunara.com/attrangs/maxdisc/default.png");
 }
 
-.product_name {
-  font-size: 30px;
-  font-weight: 700;
-}
-
-.price-box {
-  font-size: 28px;
-  margin-bottom: 16px;
-}
-
-.price-box .p1 {
-  color: #939393;
-  font-size: 24px;
-  text-decoration: line-through;
-}
-
-.price-box .p2 {
-  color: #ff9995;
-  margin-right: 10px;
-}
-
-.price-box .p3 {
-  font-weight: 700;
-  font-size: 40px;
-}
-
-.price-box .p3>em {
-  font-weight: 500;
-  font-size: 20px;
-}
-
-.price .to-discount {
-  font-size: 20px;
-  color: #ff9995;
-}
-
-.price .to-discount>span {
-  font-size: 26px;
-}
-
+/* 상품상세정보 중단 */
 .list .bef>th {
   text-align: start;
 }
 
 .list tr.bef td {
   padding: 10px 0;
+}
+
+/* 상품선택란(하단) */
+.product_select_box {
+  font-size: 18px;
+}
+
+.product_select_box>.title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#product-form>.rs {
+  margin-top: 8px;
+  display: block;
+  margin-bottom: 4px;
+  font-size: 20px;
+}
+
+.quantity_title {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+#product-form>#product-select {
+  outline: none;
+  padding: 8px;
+  border: 1px solid #dbdbdb;
+}
+
+#quantity-input {
+  outline: none;
+  padding: 8px;
+  border: 1px solid #dbdbdb;
+}
+
+.product_select_function {
+  margin-top: 40px;
+}
+
+#add-to-cart {
+  width: 200px;
+  height: 50px;
+  border: 1px solid #dbdbdb;
+}
+
+#add-to-cart:hover {
+  background-color: #f5f5f5;
+}
+
+#purchase-button {
+  color: white;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  border: 1px solid #333;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.total-price {
+  border: 1px solid #dbdbdb;
+  border-left-width: 0;
+  border-right-width: 0;
+  padding: 20px 8px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+#total-price {
+  font-size: 22px;
+  color: #ff9995;
+  font-weight: 700;
+}
+
+.loyalty-points {
+  margin-top: 40px;
+}
+
+#loyalty-points-checkbox {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #dbdbdb;
+}
+
+
+.loyalty-points>span {
+  text-decoration: underline;
 }

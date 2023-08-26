@@ -355,18 +355,6 @@
                             </div>
                           </td>
                         </tr>
-                        <tr class="bef">
-                          <th scope="row">사이즈 안내</th>
-                          <td>
-                            <div class="benefit">
-                              <div>
-                                <span>
-                                  착장 모델 사이즈
-                                </span>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
                         <tr>
                           <td colspan="2" height="10"></td>
                         </tr>
@@ -376,7 +364,55 @@
                   <div style="border-top: 1px solid #e9e9e9;"></div>
 
                   <!-- 선택폼 -->
+                  <div class="product_select_box">
 
+                    <div class="title">옵션 선택란</div>
+
+                    <form id="product-form" class="flex flex-col">
+
+                      <label for="product-select" class="rs">* 필수 선택 *</label>
+                      <select id="product-select">
+                        <option value="" selected disabled>상품 선택</option>
+                        <option value="20000">
+                          <span>개껌 10g + 말랑간식 3개</span>
+                        </option>
+                      </select>
+                      <label for="quantity-input" class="quantity_title mt-6">수량</label>
+                      <input type="number" id="quantity-input" value="1" min="1">
+
+                      <!-- 적립금 관련 요소 -->
+                      <div class="loyalty-points flex justify-between">
+                        <div style="user-select: none;" class="flex items-center gap-1">
+                          <input type="checkbox" id="loyalty-points-checkbox">
+                          <label for="loyalty-points-checkbox">적립금 사용</label>
+                        </div>
+                        <span id="loyalty-points-balance">보유 적립금 : <span>1000</span>원</span>
+                      </div>
+
+                    </form>
+
+                    <div class="product_select_function flex flex-col gap-8">
+                      <div class="flex gap-4">
+                        <button id="add-to-cart" class="flex-1">장바구니</button>
+                        <button id="purchase-button" class="flex-1">구매하기</button>
+                      </div>
+                      <div class="flex justify-between items-center total-price">
+                        <div>총금액</div>
+                        <div id="total-price">
+                          0원
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="cart" class="hidden">
+                      <h2>장바구니</h2>
+                      <ul id="cart-items"></ul>
+                      <div id="cart-total">장바구니 총 가격: 0원</div>
+                      <button id="purchase-cart-button">장바구니 구매하기</button>
+                    </div>
+
+                  </div>
+                  <!-- 선택폼 끝-->
 
                 </div>
               </div>
