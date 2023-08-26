@@ -128,7 +128,7 @@ $(function () {
       cartTotalPrice += price;
     });
 
-    cartTotal.textContent = `장바구니 총 가격: ${cartTotalPrice}원`;
+    cartTotal.textContent = `${cartTotalPrice}원`;
   }
 
   // 바로 구매하기
@@ -152,10 +152,9 @@ $(function () {
     const price = parseInt(selectedOption.value);
     const total = price * quantity;
 
-    const confirmPurchase = confirm(`${productName} ${quantity}개를 구매하시겠습니까?\n총 가격: ${total}원`);
+    const confirmPurchase = confirm(`정말로 구매하시겠습니까?`);
 
     if (confirmPurchase) {
-      alert(`${productName} ${quantity}개를 구매하셨습니다. 총 가격: ${total}원`);
       quantityInput.value = '1'; // 수량 초기화
       productSelect.value = ''; // 상품 선택 초기화
       totalPrice.textContent = `0원`; // 총 가격 초기화
@@ -187,7 +186,7 @@ $(function () {
       itemsToPurchase.push({ productName, quantity, price });
     });
 
-    const confirmPurchase = confirm(`장바구니의 상품을 구매하시겠습니까?\n총 가격: ${cartTotalPrice}원`);
+    const confirmPurchase = confirm(`정말로 구매하시겠습니까?`);
     if (confirmPurchase) {
       cartItemsList.innerHTML = '';
       updateTotalPrice();
@@ -200,6 +199,33 @@ $(function () {
   }
 
 
+  // 적립금 체크박스
+  // 보유 적립금 체크박스와 보유 적립금 금액 요소 가져오기
+  const loyaltyPointsCheckbox = document.getElementById('loyalty-points-checkbox');
+  const loyaltyPointsBalance = document.querySelector('#loyalty-points-balance span');
+
+  // 보유 적립금이 체크되었을 때 호출될 함수 등록
+  loyaltyPointsCheckbox.addEventListener('change', applyLoyaltyPoints);
+
+  // 적립금을 적용하는 함수
+  function applyLoyaltyPoints() {
+    const selectedOption = productSelect.options[productSelect.selectedIndex];
+    if (!selectedOption.value) {
+      return;
+    }
+
+    const price = parseInt(selectedOption.value);
+    const quantity = parseInt(quantityInput.value);
+    let total = price * quantity;
+
+    if (loyaltyPointsCheckbox.checked) {
+      const loyaltyPoints = parseInt(loyaltyPointsBalance.textContent);
+      total -= loyaltyPoints;
+    }
+
+    const formattedTotal = total.toLocaleString();
+    totalPrice.textContent = `${formattedTotal}원`;
+  }
 
 });
 
